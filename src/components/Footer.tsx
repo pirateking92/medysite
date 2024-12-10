@@ -49,7 +49,7 @@ const Footer = () => {
       ref={footerRef}
       className="mt-5 bg-black py-4 px-6 flex items-center justify-between opacity-0"
     >
-      {/* Left: Link to maker's website */}
+      {/* Left: Link to my website */}
       <div className="relative">
         <Link
           href="https://mattdoyle.vercel.app"
@@ -63,7 +63,7 @@ const Footer = () => {
       {/* Right: Static content */}
       <div className="flex items-center sm:justify-end justify-center text-sm text-gray-100">
         <a
-          href="https://www.instagram.com/sepy.baghaei/?hl=en"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
           className="pr-3 text-white/70 hover:text-white transition-colors duration-200 flex items-center"
@@ -71,7 +71,7 @@ const Footer = () => {
           <SiInstagram size={24} />
         </a>
         <span>
-          &copy; {new Date().getFullYear()} Sepy Baghaei. All rights reserved.
+          &copy; {new Date().getFullYear()} Medy D'Avino. All rights reserved.
         </span>
       </div>
     </footer>

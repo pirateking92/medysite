@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --custom-font-color: #d8bf9f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,7 +14,13 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --custom-font-color: #d8bf9f;
   }
+}
+
+/* Apply custom font color to all text elements */
+body, h1, h2, h3, h4, h5, h6, p, span, div, a, li, td, th {
+  color: var(--custom-font-color);
 }
 
 body {
@@ -29,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
   }
   .bg-black-to-navy {
-    background-image: linear-gradient(to bottom right, #000000, #191932);
+    background-image: linear-gradient(to bottom right, #003366, #003366);
   }
 }
 
