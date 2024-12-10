@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/mattdoyle/Documents/Coding/medysite/src/app/layout\":[\"static/media/575bcb56b500cc9b-s.p.woff2\",\"static/media/fad5e1188f09afdc-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
