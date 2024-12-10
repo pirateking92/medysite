@@ -1,12 +1,19 @@
+import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="">
       <Navbar />
-      <div className="">
-        <main></main>
-      </div>
+      <HeroSection />
     </div>
   );
 }
