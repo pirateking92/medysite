@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <div>
       <Navbar />
-      <div className="text-8xl ">
+      <div className="">
         <main></main>
       </div>
     </div>

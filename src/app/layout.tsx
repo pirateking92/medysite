@@ -1,6 +1,6 @@
 // app/layout.tsx
 import { Raleway, Alegreya } from "next/font/google";
-import "/src/app/globals.css";
+import "/src/styles/globals.css";
 import "flowbite/dist/flowbite.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,7 +11,7 @@ const headingFont = Raleway({
   variable: "--font-headingFont",
 });
 
-const bodyFont = Alegreya({
+const bodyFont = Raleway({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-bodyfont",
