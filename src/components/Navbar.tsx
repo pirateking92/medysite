@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import NavLink from "./NavLink";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import AnimatedDropdownMenu from "./AnimatedDropdownMenu";
 interface NavLink {
   title: string;
   path: string;
@@ -13,14 +14,22 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "CV",
-    path: "/cv",
+    title: "Translation",
+    path: "/translation",
   },
   // { title: "Productions", path: "/productions" },
+  {
+    title: "Interpreting",
+    path: "/interpreting",
+  },
+  {
+    title: "Project Management",
+    path: "/projectmanagement",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
   {
     title: "Contact",
     path: "/contact",
@@ -81,7 +90,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 left-0 right-0 z-20 bg-black bg-opacity-50"
+      className="fixed top-0 left-0 right-0 z-20 bg-black bg-opacity-5"
     >
       <div className="flex container items-center justify-between mx-auto p-4">
         {/* Logo */}
@@ -109,7 +118,7 @@ const Navbar = () => {
         </div>
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          {/* <AnimatedDropdownMenu links={navLinks} /> */}
+          <AnimatedDropdownMenu links={navLinks} />
         </div>
       </div>
     </nav>

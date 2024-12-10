@@ -1,11 +1,11 @@
 // app/layout.tsx
-import { Indie_Flower, Alegreya } from "next/font/google";
+import { Raleway, Alegreya } from "next/font/google";
 import "/src/app/globals.css";
 import "flowbite/dist/flowbite.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const headingFont = Indie_Flower({
+const headingFont = Raleway({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-headingFont",
