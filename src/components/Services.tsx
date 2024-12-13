@@ -6,7 +6,7 @@ import SmokeFadeIn from "./SmokeFadeIn";
 export function Services() {
   return (
     <SmokeFadeIn visibleOnLoad={false}>
-      <h1 className="flex flex-auto text-3xl text-bold m-10">Services</h1>
+      <h1 className="flex flex-auto text-5xl text-bold m-10">Services</h1>
       <div className="h-screen py-20 w-full">
         <LayoutGrid cards={cards} />
       </div>
