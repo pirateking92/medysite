@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -54,9 +54,9 @@ const Footer = () => {
         <Link
           href="https://mattdoyle.vercel.app"
           target="_blank"
-          className="text-sm text-white hover:text-gray-300 transition"
+          className="text-sm hover:text-white transition"
         >
-          Made by Matt Doyle
+          Designed by Matt Doyle
         </Link>
       </div>
 

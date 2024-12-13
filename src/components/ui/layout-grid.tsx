@@ -9,6 +9,7 @@ type Card = {
   content: JSX.Element | React.ReactNode | string;
   className: string;
   thumbnail: string;
+  hoverText?: string;
 };
 
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
@@ -60,17 +61,37 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 };
 
 const ImageComponent = ({ card }: { card: Card }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <motion.img
-      layoutId={`image-${card.id}-image`}
-      src={card.thumbnail}
-      height="500"
-      width="500"
-      className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
+    <div
+      className="relative w-full h-full"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <motion.img
+        layoutId={`image-${card.id}-image`}
+        src={card.thumbnail}
+        height="500"
+        width="500"
+        className={cn(
+          "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
+          isHovered ? "opactity-50" : "opacity-100"
+        )}
+        alt="thumbnail"
+      />
+      {card.hoverText && isHovered && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+        >
+          <p className="text-center px-4 text-ld font-semibold">
+            {card.hoverText}
+          </p>
+        </motion.div>
       )}
-      alt="thumbnail"
-    />
+    </div>
   );
 };
 
