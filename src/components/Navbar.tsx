@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import NavLink from "./NavLink";
@@ -90,7 +90,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 left-0 right-0 z-20 bg-black bg-opacity-5"
+      className="fixed top-0 left-0 right-0 z-20 bg-[#fae8e0] "
     >
       <div className="flex container items-center justify-between mx-auto p-4">
         {/* Logo */}
@@ -99,8 +99,12 @@ const Navbar = () => {
           className="text-lg text-white sm:text-xl md:text-3xl lg:text-4xl"
         >
           {/* <GradualSpacing */}
-          Medy D'Avino
-          {/* /> */}
+          <Image
+            src="/mdlingLogo.png"
+            alt="Medys Logo"
+            height={100}
+            width={100}
+          />
         </Link>
         {/* Desktop Menu */}
         <div className="hidden md:block">

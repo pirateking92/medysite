@@ -36,7 +36,7 @@ const AnimatedDropdownMenu = ({ links }) => {
     <div className="relative">
       <button
         ref={buttonRef}
-        className="flex items-center px-4 py-2 text-slate-200 hover:text-white hover:border-white bg-opacity-50"
+        className="flex items-center px-4 py-2 text-slate-700 hover:--custom-font-color hover:border-white bg-opacity-50"
         aria-label="Toggle menu"
       >
         <div className="relative w-[50px] h-[40px]">
@@ -64,7 +64,7 @@ const AnimatedDropdownMenu = ({ links }) => {
       </button>
       <div
         ref={menuRef}
-        className={`fixed inset-x-0 top-16 -bottom-0 z-20 flex flex-col bg-opacity-90 transition-all duration-300 ease-in-out transform ${
+        className={`fixed inset-x-0 mt-5 top-24 -bottom-0 z-20 flex flex-col bg-opacity-90 bg-[#fae8e0] transition-all duration-300 ease-in-out transform ${
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-2 pointer-events-none"

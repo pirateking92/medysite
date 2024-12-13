@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Interpreter, Translator, Project Manager - Italian, English, Spanish",
   icons: {
-    icon: "/mdlingLogo.png",
+    icon: "/mdlingLogoClean.png",
   },
 };
 

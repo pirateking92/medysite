@@ -1,19 +1,17 @@
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Services } from "@/components/Services";
+import SmokeFadeIn from "@/components/SmokeFadeIn";
 
 export default function HomePage() {
   return (
     <div className="">
       <Navbar />
-      <HeroSection />
+      <SmokeFadeIn visibleOnLoad={false}>
+        <HeroSection />
+
+        <Services />
+      </SmokeFadeIn>
     </div>
   );
 }
