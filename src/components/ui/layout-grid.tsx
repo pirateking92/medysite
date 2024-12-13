@@ -63,11 +63,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 const ImageComponent = ({ card }: { card: Card }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div
-      className="relative w-full h-full"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <>
       <motion.img
         layoutId={`image-${card.id}-image`}
         src={card.thumbnail}
@@ -75,23 +71,20 @@ const ImageComponent = ({ card }: { card: Card }) => {
         width="500"
         className={cn(
           "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
-          isHovered ? "opactity-50" : "opacity-100"
+          isHovered ? "opactity-70" : "opacity-100"
         )}
         alt="thumbnail"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       />
       {card.hoverText && isHovered && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
-        >
-          <p className="text-center px-4 text-ld font-semibold">
+        <div className="absolute inset-0 z-10 bg-black bg-opacity-50 flex items-center justify-center pointer-events-none">
+          <p className="text-white text-center px-4 text-lg font-semibold">
             {card.hoverText}
           </p>
-        </motion.div>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

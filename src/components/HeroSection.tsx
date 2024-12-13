@@ -10,7 +10,6 @@ import {
   CardFooter,
 } from "./ui/card";
 import SmokeFadeIn from "./SmokeFadeIn";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 
 export default function HeroSection() {
