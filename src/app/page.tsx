@@ -7,11 +7,9 @@ export default function HomePage() {
   return (
     <div className="">
       <Navbar />
-      <SmokeFadeIn visibleOnLoad={false}>
-        <HeroSection />
+      <HeroSection />
 
-        <Services />
-      </SmokeFadeIn>
+      <Services />
     </div>
   );
 }
