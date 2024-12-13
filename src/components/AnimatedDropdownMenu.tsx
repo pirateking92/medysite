@@ -36,7 +36,7 @@ const AnimatedDropdownMenu = ({ links }) => {
     <div className="relative">
       <button
         ref={buttonRef}
-        className="flex items-center px-4 py-2 text-slate-700 hover:--custom-font-color hover:border-white bg-opacity-50"
+        className="flex items-center px-4 py-2 text-slate-700 hover:--custom-font-color hover:border-white "
         aria-label="Toggle menu"
       >
         <div className="relative w-[50px] h-[40px]">

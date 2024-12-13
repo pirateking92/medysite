@@ -24,7 +24,7 @@ export default function HeroSection() {
         thirdColor="#d8bf9f"
         fourthColor="fae8e0"
       >
-        <div className="absolute z-50 inset-0 flex flex-col items-left justify-center text-white font-bold px-10 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+        <div className="absolute z-10 inset-0 flex flex-col items-left justify-center text-white font-bold px-10 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
           {" "}
           <SmokeFadeIn visibleOnLoad={false}>
             <h1 className="bg-clip-text text-left text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 pb-10">
