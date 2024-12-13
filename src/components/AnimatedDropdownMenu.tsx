@@ -64,7 +64,7 @@ const AnimatedDropdownMenu = ({ links }) => {
       </button>
       <div
         ref={menuRef}
-        className={`fixed inset-x-0 mt-5 top-24 -bottom-0 z-20 flex flex-col bg-opacity-90 bg-[#fae8e0] transition-all duration-300 ease-in-out transform ${
+        className={`fixed inset-x-0 mt-5 top-24 -bottom-0 z-20 flex flex-col bg-[#fae8e0] transition-all duration-300 ease-in-out transform ${
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-2 pointer-events-none"
@@ -98,7 +98,7 @@ const AnimatedDropdownMenu = ({ links }) => {
         <div className="w-full px-8 py-6 border-t border-white/10">
           <div className="flex items-end justify-end space-x-8">
             <a
-              href="https://www.instagram.com/sepy.baghaei/?hl=en"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors duration-200"
