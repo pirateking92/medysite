@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <main>
       {/* div for initial text and intro */}
-      <div className="flex flex-col items-left justify-center text-black font-bold min-h-screen px-10 pointer-events-none text-3xl text-center bg-[url(/medyBanner.png)] bg-no-repeat bg-cover md:mt-20 md:text-4xl lg:text-xl lg:pt-32">
+      <div className="flex flex-col items-left justify-center text-black font-bold min-h-screen px-10 pointer-events-none text-3xl text-center bg-[url(/medyBanner.png)] bg-fixed bg-no-repeat bg-cover md:mt-20 md:text-4xl lg:text-xl lg:pt-32">
         {" "}
         <SmokeFadeIn visibleOnLoad={false}>
           <h1 className="">MDLinguistics</h1>
