@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import {
   Card,
   CardHeader,
@@ -16,30 +15,19 @@ export default function HeroSection() {
   return (
     <main>
       {/* div for initial text and intro */}
-      <BackgroundGradientAnimation
-        className="rounded"
-        firstColor="#fdfaf0"
-        secondColor="#003366"
-        thirdColor="#d8bf9f"
-        fourthColor="fae8e0"
-      >
-        <div className="absolute z-10 inset-0 flex flex-col items-left justify-center text-white font-bold px-10 pointer-events-none text-3xl text-center md:text-4xl lg:text-xl lg:pt-32">
-          {" "}
-          <SmokeFadeIn visibleOnLoad={false}>
-            <h1 className="bg-clip-text text-left text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 pb-10">
-              MDLinguistics
-            </h1>
-            <h2 className="bg-clip-text text-left text-transparent drop shadow 1-xl bg-gradient-to-b from-white/80 to-white/20 pb-10 ">
-              Comprehensive language solutions, catered to your needs
-            </h2>
-            <p className="bg-clip-text text-left text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 prose-lg">
-              Explore our expert translation, interpreting, localization, and
-              consultation services, designed to elevate your global
-              communication
-            </p>
-          </SmokeFadeIn>
-        </div>
-      </BackgroundGradientAnimation>
+      <div className="flex flex-col items-left justify-center text-black font-bold min-h-screen px-10 pointer-events-none text-3xl text-center bg-[url(/medyBanner.png)] bg-no-repeat bg-cover md:mt-20 md:text-4xl lg:text-xl lg:pt-32">
+        {" "}
+        <SmokeFadeIn visibleOnLoad={false}>
+          <h1 className="">MDLinguistics</h1>
+          <h2 className="">
+            Comprehensive language solutions, catered to your needs
+          </h2>
+          <p className="">
+            Explore our expert translation, interpreting, localization, and
+            consultation services, designed to elevate your global communication
+          </p>
+        </SmokeFadeIn>
+      </div>
       <div
         className="flex flex-col-reverse
                  md:flex-row

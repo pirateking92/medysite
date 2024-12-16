@@ -13,7 +13,7 @@ const NavLink: React.FC<NavLinkProps> = ({
   openInNewTab = false,
 }) => {
   const linkClass =
-    "block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white";
+    "block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-lg rounded md:p-0 hover:text-[#003366]";
 
   if (openInNewTab) {
     return (

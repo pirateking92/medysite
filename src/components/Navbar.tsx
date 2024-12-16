@@ -94,10 +94,7 @@ const Navbar = () => {
     >
       <div className="flex container items-center justify-between mx-auto p-4">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-lg text-white sm:text-xl md:text-3xl lg:text-4xl"
-        >
+        <Link href="/">
           {/* <GradualSpacing */}
           <Image
             src="/mdlingLogo.png"
@@ -108,7 +105,7 @@ const Navbar = () => {
         </Link>
         {/* Desktop Menu */}
         <div className="hidden md:block">
-          <ul className=" text-white flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink
