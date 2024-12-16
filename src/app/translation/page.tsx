@@ -4,9 +4,15 @@ export default function TranslationPage() {
   return (
     <div>
       <Navbar />
-      <div className="text-8xl ">
-        <main></main>
-      </div>
+
+      <main className="flex flex-col justify-center items-center h-screen">
+        <div className="w-full text-left">
+          {" "}
+          {/* Add this wrapper */}
+          <h1 className="text-7xl text-left m-5">Translation</h1>
+          <h2 className="text-left m-5">Welcome to our translation services</h2>
+        </div>
+      </main>
     </div>
   );
 }

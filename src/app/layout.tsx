@@ -20,9 +20,9 @@ const bodyFont = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Medy D'Avino",
+  title: "MDLinguistcs",
   description:
-    "Interpreter, Translator, Project Manager - Italian, English, Spanish",
+    "Interpretation, Translation, Project Management - Italian, English, Spanish",
   icons: {
     icon: "/mdlingLogoClean.png",
   },

@@ -90,7 +90,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 left-0 right-0 z-20 bg-[#fae8e0] "
+      className="fixed top-0 left-0 right-0 z-20 bg-[#fae8e0] mb-5"
     >
       <div className="flex container items-center justify-between mx-auto p-4">
         {/* Logo */}
