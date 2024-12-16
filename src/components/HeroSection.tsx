@@ -18,12 +18,12 @@ export default function HeroSection() {
       {/* div for initial text and intro */}
       <BackgroundGradientAnimation
         className="rounded"
-        firstColor="#fdfa0"
+        firstColor="#fdfaf0"
         secondColor="#003366"
         thirdColor="#d8bf9f"
         fourthColor="fae8e0"
       >
-        <div className="absolute z-10 inset-0 flex flex-col items-left justify-center text-white font-bold px-10 pointer-events-none text-3xl text-center md:text-4xl lg:text-6xl lg:pt-32">
+        <div className="absolute z-10 inset-0 flex flex-col items-left justify-center text-white font-bold px-10 pointer-events-none text-3xl text-center md:text-4xl lg:text-xl lg:pt-32">
           {" "}
           <SmokeFadeIn visibleOnLoad={false}>
             <h1 className="bg-clip-text text-left text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 pb-10">

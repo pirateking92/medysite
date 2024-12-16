@@ -1,5 +1,5 @@
 // app/layout.tsx
-import { Raleway, Alegreya } from "next/font/google";
+import { Raleway, Alfa_Slab_One } from "next/font/google";
 import "/src/styles/globals.css";
 import "flowbite/dist/flowbite.css";
 import Navbar from "@/components/Navbar";
@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import LenisScrollProvider from "./providers/lenis-provider";
 import { Metadata } from "next";
 
-const headingFont = Raleway({
+const headingFont = Alfa_Slab_One({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-headingFont",
@@ -39,7 +39,6 @@ export default function RootLayout({
         <LenisScrollProvider>
           <main className="flex-grow">{children}</main>
         </LenisScrollProvider>
-
         <Footer />
       </body>
     </html>
