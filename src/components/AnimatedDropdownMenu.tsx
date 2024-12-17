@@ -64,7 +64,7 @@ const AnimatedDropdownMenu = ({ links }) => {
       </button>
       <div
         ref={menuRef}
-        className={`fixed inset-x-0 mt-5 top-24 -bottom-0 z-20 flex flex-col bg-[#fae8e0] transition-all duration-300 ease-in-out transform ${
+        className={`fixed inset-x-0 mt-5 top-24 -bottom-0 z-20 flex flex-col bg-[#003366] transition-all duration-300 ease-in-out transform ${
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-2 pointer-events-none"

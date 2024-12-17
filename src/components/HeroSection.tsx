@@ -15,17 +15,20 @@ export default function HeroSection() {
   return (
     <main>
       {/* div for initial text and intro */}
-      <div className="flex flex-col items-left justify-center text-black font-bold min-h-screen px-10 pointer-events-none text-3xl text-center bg-[url(/medyBanner.png)] bg-fixed bg-no-repeat bg-cover md:mt-20 md:text-4xl lg:text-xl lg:pt-32">
+      <div className="flex flex-col justify-center text-black text-font-bold min-h-screen px-10 pointer-events-none text-3xl text-left bg-[url(/medyBanner.png)] bg-fixed bg-no-repeat bg-cover">
         {" "}
         <SmokeFadeIn visibleOnLoad={false}>
-          <h1 className="">MDLinguistics</h1>
-          <h2 className="">
-            Comprehensive language solutions, catered to your needs
-          </h2>
-          <p className="">
-            Explore our expert translation, interpreting, localization, and
-            consultation services, designed to elevate your global communication
-          </p>
+          <div className="lg:w-[50vh] md:w-[50vh]">
+            <h1 className="mb-10">MDLinguistics</h1>
+            <h2 className="mb-10">
+              Comprehensive language solutions, catered to your needs
+            </h2>
+            <p className="">
+              Explore our expert translation, interpreting, localization, and
+              consultation services, designed to elevate your global
+              communication
+            </p>
+          </div>
         </SmokeFadeIn>
       </div>
       <div

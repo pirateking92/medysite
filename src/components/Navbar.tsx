@@ -90,22 +90,23 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 left-0 right-0 z-20 bg-[#fae8e0] mb-5"
+      className="fixed top-0 left-0 right-0 z-20 bg-[#003366] mb-5"
     >
-      <div className="flex container items-center justify-between mx-auto p-4">
+      <div className="flex container items-center  mx-auto p-4">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" className="mr-auto">
           {/* <GradualSpacing */}
           <Image
             src="/mdlingLogo.png"
             alt="Medys Logo"
             height={100}
             width={100}
+            className="bg-[#fae8e0] rounded-lg"
           />
         </Link>
         {/* Desktop Menu */}
-        <div className="hidden md:block">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+        <div className="hidden lg:block lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
+          <ul className="text-white flex items-center space-x-8">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink
@@ -118,7 +119,7 @@ const Navbar = () => {
           </ul>
         </div>
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="lg:hidden ml-auto">
           <AnimatedDropdownMenu links={navLinks} />
         </div>
       </div>

@@ -56,9 +56,9 @@ h6 {
   .bg-medy-colors {
     background-image: linear-gradient(
       to bottom,
-      #003366,
-      #fdfaf0,
+      #003366 30%,
       #d8bf9f,
+      #fdfaf0,
       #fae8e0
     );
   }
