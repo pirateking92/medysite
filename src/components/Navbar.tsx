@@ -44,33 +44,36 @@ const Navbar = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    const navbar = navbarRef.current;
 
-    const contentHeight = document.body.scrollHeight;
-    const viewportHeight = window.innerHeight;
-    const SCROLL_BUFFER = 50;
+    if (!navbar) return;
 
-    // Simpler animation targeting opacity 0 as the "hidden" state
-    const showNav = gsap.to(navbarRef.current, {
+    const tl = gsap.timeline({ paused: true });
+    tl.to(navbar, {
       opacity: 0,
+      y: -100,
       duration: 0.4,
-      paused: true,
-      reversed: true, // Start in visible state (opacity 1)
+      ease: "power2.in",
     });
 
-    if (contentHeight > viewportHeight + SCROLL_BUFFER) {
-      ScrollTrigger.create({
-        trigger: navbarRef.current,
-        start: "top top",
-        end: "max",
-        scroller: document.documentElement,
-        onUpdate: (self) => {
-          self.direction === -1 ? showNav.reverse() : showNav.play();
-        },
-      });
-    }
+    ScrollTrigger.create({
+      trigger: document.documentElement,
+      start: "top top",
+      end: "bottom bottom",
+      onUpdate: (self) => {
+        if (window.scrollY > 100) {
+          // Scrolling down
+          if (self.direction === 1) {
+            tl.play();
+          } else {
+            // Scrolling up
+            tl.reverse();
+          }
+        }
+      },
+    });
 
     return () => {
-      showNav.kill();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
@@ -89,44 +92,44 @@ const Navbar = () => {
   }, [navbarOpen]);
 
   return (
-    <SmokeFadeIn visibleOnLoad={false}>
-      <nav
-        ref={navbarRef}
-        className="fixed top-0 left-0 right-0 z-20 bg-[#003366] mb-5"
-      >
-        <div className="flex container items-center  mx-auto p-4">
-          {/* Logo */}
-          <Link href="/" className="mr-auto">
-            {/* <GradualSpacing */}
-            <Image
-              src="/mdlingLogo.png"
-              alt="Medys Logo"
-              height={100}
-              width={100}
-              className="bg-[#fae8e0] rounded-lg"
-            />
-          </Link>
-          {/* Desktop Menu */}
-          <div className="hidden lg:block lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
-            <ul className="text-white flex items-center space-x-8">
-              {navLinks.map((link, index) => (
-                <li key={index}>
-                  <NavLink
-                    href={link.path}
-                    title={link.title}
-                    openInNewTab={link.openInNewTab}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden ml-auto">
-            <AnimatedDropdownMenu links={navLinks} />
-          </div>
+    // <SmokeFadeIn visibleOnLoad={false}>
+    <nav
+      ref={navbarRef}
+      className="fixed top-0 left-0 right-0 z-20 bg-[#003366] mb-5 transition-transform duration-300"
+    >
+      <div className="flex container items-center  mx-auto p-4">
+        {/* Logo */}
+        <Link href="/" className="mr-auto">
+          {/* <GradualSpacing */}
+          <Image
+            src="/mdlingLogo.png"
+            alt="Medys Logo"
+            height={100}
+            width={100}
+            className="bg-[#fae8e0] rounded-lg"
+          />
+        </Link>
+        {/* Desktop Menu */}
+        <div className="hidden lg:block lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
+          <ul className="text-white flex items-center space-x-8">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <NavLink
+                  href={link.path}
+                  title={link.title}
+                  openInNewTab={link.openInNewTab}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
-      </nav>
-    </SmokeFadeIn>
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden ml-auto">
+          <AnimatedDropdownMenu links={navLinks} />
+        </div>
+      </div>
+    </nav>
+    // </SmokeFadeIn>
   );
 };
 
