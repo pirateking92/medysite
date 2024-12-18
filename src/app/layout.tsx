@@ -35,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
-      <body className="bg-medy-colors flex flex-col min-h-screen bg-no-repeat bg-fixed">
+      <body className="bg-medy-colors flex flex-col min-h-screen bg-no-repeat bg-fixed pt-32">
         <LenisScrollProvider>
           <main className="flex-grow">{children}</main>
         </LenisScrollProvider>

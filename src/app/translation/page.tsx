@@ -6,7 +6,7 @@ export default function TranslationPage() {
       <Navbar />
 
       <main className="flex flex-col justify-center items-center h-screen">
-        <div className="w-full text-left">
+        <div className="w-full text-left h-screen pt-40 bg-[url(/chatBubble.png)] bg-no-repeat bg-cover">
           {" "}
           <h1 className="text-7xl text-left m-5">Translation</h1>
           <h2 className="text-left m-5">Welcome to our translation services</h2>

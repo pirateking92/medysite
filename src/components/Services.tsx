@@ -53,6 +53,18 @@ const SkeletonThree = () => {
     </div>
   );
 };
+const SkeletonFour = () => {
+  return (
+    <div>
+      <p className="font-bold md:text-4xl text-xl text-white">Contact</p>
+      <p className="font-normal text-base text-white">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+        luctus nec ullamcorper mattis, pulvinar dapibus leo.
+      </p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200"></p>
+    </div>
+  );
+};
 
 const cards = [
   {
@@ -75,5 +87,12 @@ const cards = [
     className: "col-span-1",
     thumbnail: "/projMang.avif",
     hoverText: "Project Management",
+  },
+  {
+    id: 4,
+    content: <SkeletonFour />,
+    className: "md:col-span-2",
+    thumbnail: "/translating.avif",
+    hoverText: "Contact",
   },
 ];
