@@ -6,7 +6,6 @@ import SmokeFadeIn from "@/components/SmokeFadeIn";
 export default function HomePage() {
   return (
     <div className="">
-      <Navbar />
       <HeroSection />
 
       <Services />

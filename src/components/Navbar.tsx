@@ -1,4 +1,5 @@
 "use client";
+import SmokeFadeIn from "./SmokeFadeIn";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
@@ -88,42 +89,44 @@ const Navbar = () => {
   }, [navbarOpen]);
 
   return (
-    <nav
-      ref={navbarRef}
-      className="fixed top-0 left-0 right-0 z-20 bg-[#003366] mb-5"
-    >
-      <div className="flex container items-center  mx-auto p-4">
-        {/* Logo */}
-        <Link href="/" className="mr-auto">
-          {/* <GradualSpacing */}
-          <Image
-            src="/mdlingLogo.png"
-            alt="Medys Logo"
-            height={100}
-            width={100}
-            className="bg-[#fae8e0] rounded-lg"
-          />
-        </Link>
-        {/* Desktop Menu */}
-        <div className="hidden lg:block lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
-          <ul className="text-white flex items-center space-x-8">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink
-                  href={link.path}
-                  title={link.title}
-                  openInNewTab={link.openInNewTab}
-                />
-              </li>
-            ))}
-          </ul>
+    <SmokeFadeIn visibleOnLoad={false}>
+      <nav
+        ref={navbarRef}
+        className="fixed top-0 left-0 right-0 z-20 bg-[#003366] mb-5"
+      >
+        <div className="flex container items-center  mx-auto p-4">
+          {/* Logo */}
+          <Link href="/" className="mr-auto">
+            {/* <GradualSpacing */}
+            <Image
+              src="/mdlingLogo.png"
+              alt="Medys Logo"
+              height={100}
+              width={100}
+              className="bg-[#fae8e0] rounded-lg"
+            />
+          </Link>
+          {/* Desktop Menu */}
+          <div className="hidden lg:block lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
+            <ul className="text-white flex items-center space-x-8">
+              {navLinks.map((link, index) => (
+                <li key={index}>
+                  <NavLink
+                    href={link.path}
+                    title={link.title}
+                    openInNewTab={link.openInNewTab}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden ml-auto">
+            <AnimatedDropdownMenu links={navLinks} />
+          </div>
         </div>
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden ml-auto">
-          <AnimatedDropdownMenu links={navLinks} />
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </SmokeFadeIn>
   );
 };
 
