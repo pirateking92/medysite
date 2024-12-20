@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react"; // use things there in case for later
 import { LayoutGrid } from "./ui/layout-grid";
 import SmokeFadeIn from "./SmokeFadeIn";
+import Link from "next/link";
 
 export function Services() {
   return (
@@ -17,8 +18,13 @@ export function Services() {
 const SkeletonOne = () => {
   return (
     <div>
-      <p className="font-bold md:text-4xl text-xl text-white">Translations</p>
-      <p className="font-normal text-base text-white"></p>
+      <Link
+        href="/translation"
+        className="font-bold md:text-4xl text-xl text-white hover:underline"
+      >
+        Translations
+      </Link>
+      <p className="font-normal text-base text-white hover:underline"></p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
         luctus nec ullamcorper mattis, pulvinar dapibus leo.
@@ -30,7 +36,12 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
-      <p className="font-bold md:text-4xl text-xl text-white">Interpreting</p>
+      <Link
+        href="/interpreting"
+        className="font-bold md:text-4xl text-xl text-white hover:underline"
+      >
+        Interpreting
+      </Link>
       <p className="font-normal text-base text-white">Subheading</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
@@ -42,9 +53,12 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
+      <Link
+        href="/projectmanagement"
+        className="font-bold md:text-4xl text-xl text-white hover:underline"
+      >
         Project Management
-      </p>
+      </Link>
       <p className="font-normal text-base text-white">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
         luctus nec ullamcorper mattis, pulvinar dapibus leo.
@@ -56,7 +70,12 @@ const SkeletonThree = () => {
 const SkeletonFour = () => {
   return (
     <div>
-      <p className="font-bold md:text-4xl text-xl text-white">Contact</p>
+      <Link
+        href="/contact"
+        className="font-bold md:text-4xl text-xl text-white hover:underline"
+      >
+        Contact
+      </Link>
       <p className="font-normal text-base text-white">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
         luctus nec ullamcorper mattis, pulvinar dapibus leo.

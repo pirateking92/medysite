@@ -5,6 +5,7 @@ import "flowbite/dist/flowbite.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LenisScrollProvider from "./providers/lenis-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
 
 const headingFont = Alfa_Slab_One({
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-grow pt-32">{children}</main>
           <Footer />
+          <SpeedInsights />
         </LenisScrollProvider>
       </body>
     </html>

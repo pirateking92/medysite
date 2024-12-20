@@ -36,12 +36,12 @@ const AnimatedDropdownMenu = ({ links }) => {
     <div className="relative">
       <button
         ref={buttonRef}
-        className="flex items-center px-4 py-2 text-slate-700 hover:--custom-font-color hover:border-white "
+        className="flex items-center px-4 py-2 text-white hover:--custom-font-color hover:border-white "
         aria-label="Toggle menu"
       >
         <div className="relative w-[50px] h-[40px]">
           <span
-            className={`absolute h-[3px] w-[80%] bg-current rounded-[2px] transition-all duration-300 ease-in-out
+            className={`absolute h-[3px] w-[80%] bg-current rounded-[2px] transition-all duration-300 ease-in-out text-white
             ${
               isOpen
                 ? "rotate-45 top-1/2 -translate-y-1/2"
@@ -49,11 +49,11 @@ const AnimatedDropdownMenu = ({ links }) => {
             }`}
           />
           <span
-            className={`absolute h-[3px] w-[80%] bg-current rounded-[2px] transition-all duration-300 ease-in-out top-1/2 
+            className={`absolute h-[3px] w-[80%] bg-current rounded-[2px] transition-all duration-300 ease-in-out top-1/2 text-white 
             ${isOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"}`}
           />
           <span
-            className={`absolute h-[3px] w-[80%] bg-current rounded-[2px] transition-all duration-300 ease-in-out
+            className={`absolute h-[3px] w-[80%] bg-current rounded-[2px] transition-all duration-300 ease-in-out text-white
             ${
               isOpen
                 ? "-rotate-45 top-1/2 -translate-y-1/2"

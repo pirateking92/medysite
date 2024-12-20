@@ -47,30 +47,30 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="mt-5 bg-black py-4 px-6 flex items-center justify-between opacity-0"
+      className="mt-5 bg-[#003366] text-white py-4 px-6 flex items-center justify-between opacity-0"
     >
       {/* Left: Link to my website */}
       <div className="relative">
         <Link
           href="https://mattdoyle.vercel.app"
           target="_blank"
-          className="text-sm hover:text-white transition"
+          className="text-sm text-gray-200 hover:text-white transition"
         >
           Designed by Matt Doyle
         </Link>
       </div>
 
       {/* Right: Static content */}
-      <div className="flex items-center sm:justify-end justify-center text-sm text-gray-100">
+      <div className="flex items-center sm:justify-end justify-center text-sm text-white">
         <a
           href=""
           target="_blank"
           rel="noopener noreferrer"
-          className="pr-3 text-white/70 hover:text-white transition-colors duration-200 flex items-center"
+          className="pr-3 hover:text-white transition-colors duration-200 flex items-center"
         >
-          <SiInstagram size={24} />
+          <SiInstagram className="text-white" size={24} />
         </a>
-        <span>
+        <span className="text-gray-200">
           &copy; {new Date().getFullYear()} Medy D'Avino. All rights reserved.
         </span>
       </div>
