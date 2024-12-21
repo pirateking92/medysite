@@ -7,10 +7,10 @@ export default function InterpretingPage() {
         {" "}
         <h1 className="text-7xl text-left m-5">Interpreting</h1>
         <h2 className="text-2xl text-left m-5">
-          Welcome to our translation services
+          Welcome to our interpretaion services
         </h2>
       </div>
-      <div>
+      <div className="m-10">
         <div className="flex mb-4 justify-center items-center  text-left">
           <div className="text-2xl w-1/3  ">test</div>
           <div className="w-1/3 ">words and stuff</div>

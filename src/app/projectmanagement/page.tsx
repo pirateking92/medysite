@@ -8,7 +8,7 @@ export default function ProjectManagementPage() {
         <h1 className="text-7xl text-left m-5">Project Management</h1>
         <h2 className="text-2xl text-left m-5">Let's Manage it Up!</h2>
       </div>
-      <div>
+      <div className="m-10">
         <div className="flex mb-4 justify-center items-center  text-left">
           <div className="text-2xl w-1/3  ">test</div>
           <div className="w-1/3 ">words and stuff</div>

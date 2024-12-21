@@ -10,7 +10,7 @@ export default function TranslationPage() {
           Welcome to our translation services
         </h2>
       </div>
-      <div>
+      <div className="m-10">
         <div className="flex mb-4 justify-center items-center  text-left">
           <div className="text-2xl w-1/3  ">test</div>
           <div className="w-1/3 ">words and stuff</div>

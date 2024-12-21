@@ -10,24 +10,34 @@ import {
 } from "./ui/card";
 import SmokeFadeIn from "./SmokeFadeIn";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
     <main>
       {/* div for initial text and intro */}
-      <div className="flex flex-col justify-center text-black text-font-bold min-h-screen px-10 pointer-events-none text-3xl text-left bg-[url(/medyBanner.png)] bg-fixed bg-no-repeat bg-cover">
+      <div className="flex flex-col justify-center text-black text-font-bold min-h-screen px-10 text-3xl text-left bg-[url(/medyBanner.png)] bg-fixed bg-no-repeat bg-cover">
         {" "}
         <SmokeFadeIn visibleOnLoad={false}>
           <div className="lg:w-[50vh] md:w-[50vh]">
-            <h1 className="mb-10">MDLinguistics</h1>
-            <h2 className="mb-10">
+            <h1 className="mb-10 text-5xl [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
+              MDLinguistics
+            </h1>
+            <h2 className="mb-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
               Comprehensive language solutions, catered to your needs
             </h2>
-            <p className="sm:pr-30 bg-opacity-40">
+            <p className="sm:pr-30 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
               Explore our expert translation, interpreting, localization, and
               consultation services, designed to elevate your global
               communication
             </p>
+          </div>
+          <div className="flex flex-col justify-center items-start pt-20">
+            <Link href="/contact">
+              <button className="shadow-[inset_0_0_0_2px_#000] z-50 text-black px-12 py-4 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
+                Consult
+              </button>
+            </Link>
           </div>
         </SmokeFadeIn>
       </div>
@@ -108,13 +118,13 @@ export default function HeroSection() {
             className="w-full
                    md:w-auto
                    rounded-xl
-                   pb-5
+                  mb-5
                    max-w-md
                    object-cover
-                   md:max-h-[600px]"
+                   md:max-h-[800px]"
             src="/medyprofpic.png"
             alt="profile picture"
-            width={700}
+            width={800}
             height={800}
           />
         </SmokeFadeIn>

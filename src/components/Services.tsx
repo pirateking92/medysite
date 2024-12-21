@@ -7,8 +7,10 @@ import Link from "next/link";
 export function Services() {
   return (
     <SmokeFadeIn visibleOnLoad={false}>
-      <h1 className="flex flex-auto text-5xl text-bold m-10">Services</h1>
-      <div className="h-screen py-20 w-full">
+      <h1 className="flex flex-auto text-5xl text-bold ml-10 mt-20 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
+        Services
+      </h1>
+      <div className="h-screen py-15 w-full">
         <LayoutGrid cards={cards} />
       </div>
     </SmokeFadeIn>
