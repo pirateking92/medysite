@@ -26,7 +26,7 @@ export default function HeroSection() {
             <h2 className="mb-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
               Comprehensive language solutions, catered to your needs
             </h2>
-            <p className="sm:pr-30 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
+            <p className="bg-sky-50 bg-opacity-30 rounded-full sm:pr-30 [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">
               Explore our expert translation, interpreting, localization, and
               consultation services, designed to elevate your global
               communication
