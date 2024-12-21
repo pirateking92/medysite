@@ -5,10 +5,8 @@ export default function ProjectManagementPage() {
     <>
       <div className=" flex flex-col justify-start pt-32 items-start h-[66vh] w-full bg-[url(/chatBubble.png)] bg-no-repeat bg-cover">
         {" "}
-        <h1 className="text-7xl text-left m-5">Translations</h1>
-        <h2 className="text-2xl text-left m-5">
-          Welcome to our translation services
-        </h2>
+        <h1 className="text-7xl text-left m-5">Project Management</h1>
+        <h2 className="text-2xl text-left m-5">Let's Manage it Up!</h2>
       </div>
       <div>
         <div className="flex mb-4 justify-center items-center  text-left">

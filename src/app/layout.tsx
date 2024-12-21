@@ -41,8 +41,8 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-grow pt-32">{children}</main>
           <Footer />
-          <SpeedInsights />
         </LenisScrollProvider>
+        <SpeedInsights />
       </body>
     </html>
   );

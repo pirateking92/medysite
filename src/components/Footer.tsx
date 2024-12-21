@@ -1,54 +1,11 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
 
 const Footer = () => {
-  const footerRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const footerElement = footerRef.current;
-
-    // Animate opacity based on scroll position
-    const showFooter = gsap.fromTo(
-      footerElement,
-      { opacity: 0 },
-      { opacity: 1, duration: 0.5, paused: true }
-    );
-
-    const trigger = ScrollTrigger.create({
-      trigger: document.documentElement,
-      start: "bottom bottom",
-      onEnter: () => showFooter.play(),
-      onLeaveBack: () => showFooter.reverse(),
-    });
-
-    // forced refresh to ensure proper initialisation (wasnt loading properly on load)
-    ScrollTrigger.refresh();
-
-    // Check the scroll position immediately
-    if (
-      window.scrollY + window.innerHeight >=
-      document.documentElement.scrollHeight
-    ) {
-      showFooter.play(); // Show the footer if already at the bottom
-    }
-
-    return () => {
-      trigger.kill(); // Clean up the ScrollTrigger instance
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
-
   return (
-    <footer
-      ref={footerRef}
-      className="mt-5 bg-[#003366] text-white py-4 px-6 flex items-center justify-between opacity-0"
-    >
+    <footer className="mt-5 z-50 bg-[#003366] text-white py-4 px-6 flex items-center justify-between ">
       {/* Left: Link to my website */}
       <div className="relative">
         <Link

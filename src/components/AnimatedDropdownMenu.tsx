@@ -2,16 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import NavLink from "./NavLink";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
 
-interface NavLinkItem {
-  title: string;
-  path: string;
-  openInNewTab?: boolean;
-}
-
-interface DropdownMenuProps {
-  links: NavLinkItem[];
-}
-
 const AnimatedDropdownMenu = ({ links }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -71,7 +61,7 @@ const AnimatedDropdownMenu = ({ links }) => {
         }`}
       >
         {/* Main menu content */}
-        <div className="flex-grow flex items-start justify-left">
+        <div className="flex-grow flex items-start justify-left bg-[#003366] pb-10">
           <div className="ml-4 space-y-4 mt-16">
             {links.map(
               (
@@ -80,7 +70,7 @@ const AnimatedDropdownMenu = ({ links }) => {
               ) => (
                 <div
                   key={index}
-                  className="relative text-4xl hover:underline text-white"
+                  className="relative text-5xl hover:underline text-white"
                   onClick={() => setIsOpen(false)}
                 >
                   <NavLink

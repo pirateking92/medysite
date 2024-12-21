@@ -23,7 +23,7 @@ export default function HeroSection() {
             <h2 className="mb-10">
               Comprehensive language solutions, catered to your needs
             </h2>
-            <p className="">
+            <p className="sm:pr-30 bg-opacity-40">
               Explore our expert translation, interpreting, localization, and
               consultation services, designed to elevate your global
               communication
@@ -114,12 +114,11 @@ export default function HeroSection() {
                    md:max-h-[600px]"
             src="/medyprofpic.png"
             alt="profile picture"
-            width={400}
-            height={400}
+            width={700}
+            height={800}
           />
         </SmokeFadeIn>
       </div>
-      ;
     </main>
   );
 }
