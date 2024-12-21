@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import {
   Card,
   CardContent,
@@ -10,18 +9,16 @@ import {
 export default function ContactPage() {
   return (
     <div>
-      <Navbar />
       <main>
-        <div className="min-h-[80vh] bg-[url(/phoneCall.jpg)] bg-cover bg-no-repeat flex flex-col justify-center items-end">
+        <div className="min-h-[80vh] bg-[url(/phoneCall.jpg)] bg-cover bg-no-repeat flex flex-col justify-center items-center ">
           <Card
-            className="w-full justify-end items-end
-                     max-w-xl
-                     shadow-lg
-                     border
-                     border-gray-200
-                     rounded-lg
-                     overflow-hidden
-          "
+            className="mx-5 sm:mx-auto w-full max-w-xl 
+             m-5
+             shadow-lg
+             border
+             border-gray-200
+             rounded-lg
+             overflow-hidden"
           >
             <CardHeader>
               <CardTitle>Get In Touch</CardTitle>

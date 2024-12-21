@@ -21,7 +21,7 @@ const bodyFont = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "MDLinguistcs",
+  title: "MDLinguistics",
   description:
     "Interpretation, Translation, Project Management - Italian, English, Spanish",
   icons: {
