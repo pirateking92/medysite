@@ -7,7 +7,7 @@ export default function InterpretingPage() {
         {" "}
         <h1 className="text-7xl text-left m-5">Interpreting</h1>
         <h2 className="text-2xl text-left m-5">
-          Welcome to our interpretaion services
+          Welcome to our interpretation services
         </h2>
       </div>
       <div className="m-10">
