@@ -39,6 +39,7 @@ export default function RootLayout({
       <body className="bg-medy-colors">
         <LenisScrollProvider>
           <Navbar />
+
           <main className="flex-grow pt-32">{children}</main>
           <Footer />
         </LenisScrollProvider>

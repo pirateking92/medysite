@@ -74,7 +74,7 @@ const SkeletonFour = () => {
     <div>
       <Link
         href="/contact"
-        className="font-bold md:text-4xl text-xl text-white hover:underline"
+        className="font-bold md:text-4xl text-xl text-white hover:underline "
       >
         Contact
       </Link>

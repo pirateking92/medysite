@@ -11,7 +11,7 @@ const Footer = () => {
         <Link
           href="https://mattdoyle.vercel.app"
           target="_blank"
-          className="text-sm text-gray-200 hover:text-white transition"
+          className="text-sm text-gray-200 hover:text-green-200 transition hover:underline"
         >
           Designed by Matt Doyle
         </Link>

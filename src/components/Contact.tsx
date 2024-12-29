@@ -3,7 +3,7 @@
 const Contact = () => {
   return (
     <>
-      <form className="relative z-10 overflow-hidden bg-white blur- p-20 dark:bg-dark lg:py-[120px]">
+      <section className="relative z-10 overflow-hidden bg-white blur- p-20 dark:bg-dark lg:py-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
@@ -112,7 +112,7 @@ const Contact = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
-                <form>
+                <section>
                   <ContactInputBox
                     type="text"
                     name="name"
@@ -142,12 +142,12 @@ const Contact = () => {
                       Send Message
                     </button>
                   </div>
-                </form>
+                </section>
               </div>
             </div>
           </div>
         </div>
-      </form>
+      </section>
     </>
   );
 };
