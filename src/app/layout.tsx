@@ -12,12 +12,14 @@ const headingFont = Alfa_Slab_One({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-headingFont",
+  display: "swap",
 });
 
 const bodyFont = Raleway({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-bodyfont",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
